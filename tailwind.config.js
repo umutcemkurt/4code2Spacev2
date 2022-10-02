@@ -41,16 +41,19 @@ const themes = {
     'brand' : {
         primary: customPalettes.brand
     },
-    'indigo': {
+    'tritanopia': {
         primary: {
             ...colors.teal,
             DEFAULT: colors.teal[600]
         }
     },
-    'rose'  : {
-        primary: colors.rose
+    'deuteranomali'  : {
+        primary: {
+            ...colors.rose,
+            DEFAULT: colors.rose[600]
+        }
     },
-    'purple': {
+    'protanopi': {
         primary: {
             ...colors.purple,
             DEFAULT: colors.purple[600]

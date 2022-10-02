@@ -6,6 +6,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FuseDrawerModule } from '@fuse/components/drawer';
 import { SettingsComponent } from 'app/layout/common/settings/settings.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
         RouterModule,
         MatIconModule,
         MatTooltipModule,
+        MatSlideToggleModule,
         FuseDrawerModule,
         MatButtonModule
     ],

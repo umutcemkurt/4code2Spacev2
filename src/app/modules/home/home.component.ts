@@ -1,4 +1,5 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Router } from '@angular/router';
 import { FuseScrollbarDirective } from '@fuse/directives/scrollbar';
 import { DataEngineService } from 'app/core/dataEngine/dataEngine.service';
 
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private dataEngine: DataEngineService,
+    private router:Router
    
   ) { }
 
@@ -31,6 +33,10 @@ export class HomeComponent implements OnInit {
     )
   }
 
+  readMore(feed) {
+    this.dataEngine.saveFeed(feed)
+    this.router.navigateByUrl('/home/article/' + encodeURIComponent(feed.title) )
+  }
  
   saveBookmark(feed) {
     

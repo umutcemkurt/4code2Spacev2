@@ -48,7 +48,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
         //     debugger
         //     console.log(school)
         //     school ? this.selectedSchool = school : null
-        //     school?.imgUrl ? this.footerLogoUrl = school.imgUrl :  this.footerLogoUrl = 'assets/images/logo/RitimUS-Logo.png'
+        //     school?.imgUrl ? this.footerLogoUrl = school.imgUrl :  this.footerLogoUrl = 'assets/images/logo/logo-text.svg'
         
         // })
     }
@@ -74,15 +74,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
      */
     ngOnInit(): void
     {
-        // this.stroge.ref("SchoolLogos/RitimUS-" + "Logo.png").getDownloadURL().subscribe(res => {
-        //     this.footerLogoUrl = res
-        // },err => {
 
-        //    if (err.code == _FirebaseError.fileNotFound) {
-        //     this.footerLogoUrl = 'assets/images/logo/RitimUS-Logo.png'
-        //    }
-
-        // })
         // Subscribe to navigation data
         this._navigationService.get()
             .pipe(takeUntil(this._unsubscribeAll))
@@ -101,12 +93,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
                 }
            //     console.log(user)
                 this.user = user;
-                // debugger
-                // this.playerService.getPlayers(user.id).then( t => {
-                //     this.players =  t.docs.map( r => r.data())
-                // })
-
-
+     
             });
 
         // Subscribe to media changes
@@ -118,11 +105,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
                 this.isScreenSmall = !matchingAliases.includes('md');
             });
 
-            // this.playerService.selectedPlayer
-            // .pipe(takeUntil(this._unsubscribeAll))
-            // .subscribe(player => {
-                
-            //  player ? this.selectedPlayer = player : null})
+        
 
  
 

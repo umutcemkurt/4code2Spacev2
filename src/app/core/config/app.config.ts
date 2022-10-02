@@ -1,7 +1,7 @@
 import { Layout } from 'app/layout/layout.types';
 
 // Types
-export type Scheme = 'auto' | 'dark' | 'light';
+export type Scheme = 'auto' | 'dark' | 'light' | 'dyslexia';
 export type Theme = 'default' | string;
 
 /**

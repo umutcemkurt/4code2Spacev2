@@ -9,7 +9,16 @@
 .w-mc{
     width:  max-content !important;
 }
+.vw-80{
+    width: 80vw !important;
+}
 
+body.dyslexia-mode{
+    font-family: 'OpenDyslexic', sans-serif !important;
+}
+body.contrastSensitive{
+    color: grey !important;
+}
 
 
 //OVERWRITES

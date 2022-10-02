@@ -6,7 +6,6 @@ import { takeUntil } from 'rxjs/operators';
 import { User } from 'app/core/user/user.types';
 import { UserService } from 'app/core/user/user.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { SettingsComponent } from './settings/settings.component';
 import { AuthService } from 'app/core/auth/auth.service';
 
 @Component({
@@ -100,12 +99,6 @@ export class UserComponent implements OnInit, OnDestroy
         }).subscribe();
     }
 
-    settings(){
-        const config:MatDialogConfig = {   
-            data: {user:this.user}
-        }
-        this.dialog.open(SettingsComponent, config)
-    }
 
     newStudent(){
 

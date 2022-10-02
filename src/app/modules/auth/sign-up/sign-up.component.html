@@ -69,14 +69,14 @@
 
             <!-- Title -->
             <div class="mt-6 text-center text-primary text-4xl font-extrabold tracking-tight leading-tight">
-                {{!singignUp ? "Kayıt Ol" : "İlgi Alanlarınız"}}
+                {{!singignUp ? "Sign Up" : "Topics"}}
             </div>
             <div class="flex justify-center mt-0.5 font-medium">
                 <div *ngIf="singignUp">
                     Selact at least 3 topic
                 </div>
                 <div *ngIf="!singignUp">
-                    Zaten bir hesabınız var mı ?
+                    Already have account ?
                     <a class="ml-1 text-primary-500 hover:underline" routerLink="/home?login=true">Login</a>
                 </div>
                 <!-- <a class="ml-1 text-primary-500 hover:underline" [routerLink]="['/pages/authentication/sign-in']">
@@ -104,13 +104,13 @@
                     <div class="flex justify-between w-full ">
                         
                         <mat-form-field class="w-1/2 mr-4">
-                            <mat-label>Kullanıcı Adı</mat-label>
+                            <mat-label>Username</mat-label>
                             <input
                            
                                 matInput
                                 [formControlName]="'username'">
                             <mat-error *ngIf="signInForm.get('username').hasError('required')">
-                                Username
+                                Username required
                             </mat-error>
                     
                         </mat-form-field>
@@ -185,10 +185,10 @@
                                 [svgIcon]="'heroicons_solid:eye-off'"></mat-icon>
                         </button>
                         <mat-error *ngIf="signInForm.get('rePassword').hasError('required')">
-                            Şifre gereklidir
+                            re password required
                         </mat-error>
                         <mat-error *ngIf="signInForm.get('rePassword').hasError('mustMatch')">
-                            Şifreler uyuşmuyor
+                            passwords must match
                         </mat-error>
 
                         </mat-form-field>

@@ -9,9 +9,9 @@ import { FuseAlertType } from '@fuse/components/alert';
 import { AuthService } from 'app/core/auth/auth.service';
 import { UserService } from 'app/core/user/user.service';
 import { _FirebaseError } from 'app/core/Utils/Enums/FirebaseErrors.enum';
-import { LovService } from 'app/core/Utils/lov.service';
+
 import { FirebaseError } from 'firebase/app';
-import { FacebookAuthProvider, GoogleAuthProvider, OAuthProvider } from "firebase/auth"
+
 
 
 
@@ -145,141 +145,17 @@ export class AuthSignInComponent implements OnInit {
     sendResetPassword(){
         this.auth.sendPasswordResetEmail(this.forgettedEmail).then(() => {
             
-            this.snackbar.open("Gönderildi")
+            this.snackbar.open("Sended")
             this.close()
         
         })
     }
 
-    signInWithGoogle() {
-        this.popupLogin(new GoogleAuthProvider().addScope("https://www.googleapis.com/auth/calendar")).then(async t => {
-            
-            let a = t
-            let result = await this._authService.checkUser(t.user.email, this.corporateLogin)
-            debugger
-            if (typeof result == 'string') {
-                this.showAlert = true;
-                this.alert = {
-                    type: 'error',
-                    message: result
-                };
-                this.signInForm.enable();
-
-                // Reset the form
-                this.signInNgForm.resetForm();
-                return;
-            }
-            if (!(result as any).navigate) {
-
-                if (this.corporateLogin) {
-                    localStorage.setItem("userType", "2")
-                    return this._router.navigateByUrl("/corporate/sign-up")
-                }
-
-                return this._router.navigateByUrl("/sign-up")
-            }
 
 
-            localStorage.setItem("userType", this.corporateLogin ? "2" : "1")
-
-          await     this._authService.signIn(t.user.uid)
-
-            const redirectURL = this._activatedRoute.snapshot.queryParamMap.get('redirectURL') || '/signed-in-redirect';
-
-            // Navigate to the redirect url
-            this._router.navigateByUrl(redirectURL);
-
-        }).catch(err => console.log(err))
-    }
-
-    signInWithFacebook() {
-        this.popupLogin(new FacebookAuthProvider().addScope("https://www.googleapis.com/auth/calendar")).then(async t => {
-            debugger
-            let a = t
-            let result = await this._authService.checkUser(t.user.email, this.corporateLogin)
-            if (typeof result == 'string') {
-                this.showAlert = true;
-                this.alert = {
-                    type: 'error',
-                    message: result
-                };
-                this.signInForm.enable();
-
-                // Reset the form
-                this.signInNgForm.resetForm();
-                return;
-            }
-            if (!(result as any).navigate) {
-
-                if (this.corporateLogin) {
-                    localStorage.setItem("userType", "2")
-                    return this._router.navigateByUrl("/corporate/sign-up")
-                }
-
-                return this._router.navigateByUrl("/sign-up")
-            }
-
-
-            localStorage.setItem("userType", this.corporateLogin ? "2" : "1")
-            
-            await     this._authService.signIn(t.user.uid)
-
-            const redirectURL = this._activatedRoute.snapshot.queryParamMap.get('redirectURL') || '/signed-in-redirect';
-
-            // Navigate to the redirect url
-            this._router.navigateByUrl(redirectURL);
-
-
-        }).catch(err => console.log(err))
-    }
-
-    signInWithApple() {
-        this.popupLogin(new OAuthProvider('apple.com')).then(async t => {
-            debugger
-            let a = t
-
-            let result = await this._authService.checkUser(t.user.email, this.corporateLogin)
-            if (typeof result == 'string') {
-                this.showAlert = true;
-                this.alert = {
-                    type: 'error',
-                    message: result
-                };
-                this.signInForm.enable();
-
-                // Reset the form
-                this.signInNgForm.resetForm();
-                return;
-            }
-
-            if (!(result as any).navigate) {
-
-                if (this.corporateLogin) {
-                    localStorage.setItem("userType", "2")
-                    return this._router.navigateByUrl("/corporate/sign-up")
-                }
-
-                return this._router.navigateByUrl("/sign-up")
-            }
-
-
-            localStorage.setItem("userType", this.corporateLogin ? "2" : "1")
-            await     this._authService.signIn(t.user.uid)
-
-            const redirectURL = this._activatedRoute.snapshot.queryParamMap.get('redirectURL') || '/signed-in-redirect';
-
-            // Navigate to the redirect url
-            this._router.navigateByUrl(redirectURL);
-
-        }).catch(err => console.log(err))
-    }
-
-    popupLogin(provider) {
-        return this.auth.signInWithPopup(provider)
-    }
-
-    goToUrl(url){
-        location.href = url
+ gotoURL(url){
+       this.close()
+       this._router.navigateByUrl(url)
     }
     
     close(){

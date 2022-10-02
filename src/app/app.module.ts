@@ -82,7 +82,7 @@ export function scrollFactory(overlay: Overlay): () => BlockScrollStrategy {
         // 3rd party modules that require global configuration via forRoot
         MarkdownModule.forRoot({}),
 
-        AngularFireModule.initializeApp(environment.ritimus ),
+        AngularFireModule.initializeApp(environment.spacegrid ),
         
         AngularFireRemoteConfigModule,
         AngularFireDatabaseModule,

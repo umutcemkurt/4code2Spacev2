@@ -121,4 +121,25 @@ export class SettingsComponent implements OnInit, OnDestroy
     {
         this._fuseConfigService.config = {theme};
     }
+
+    dyslexiaModeChange(e): void{
+      if (e.checked) {
+        document.getElementsByTagName("BODY")[0].classList.add("dyslexia-mode");
+
+      } else {
+        document.getElementsByTagName("BODY")[0].classList.remove("dyslexia-mode");
+        
+      }
+
+    }
+    contrastSensitiveChange(e): void{
+        if (e.checked) {
+            document.getElementsByTagName("BODY")[0].classList.add("contrastSensitive");
+    
+          } else {
+            document.getElementsByTagName("BODY")[0].classList.remove("contrastSensitive");
+            
+          }
+    
+    }
 }

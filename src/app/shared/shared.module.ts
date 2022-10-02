@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { PermittedDirective } from 'app/core/Utils/Directives/Permitted.directive';
 import { TranslocoCoreModule } from 'app/core/transloco/transloco.module';
 import { SafeHTMLPipe } from 'app/core/Utils/Pipes/SafeHTML.pipe';
 
@@ -21,7 +20,7 @@ import { SafeHTMLPipe } from 'app/core/Utils/Pipes/SafeHTML.pipe';
         
     ],
     declarations:[
-        PermittedDirective,
+
         SafeHTMLPipe
    
     ],
@@ -31,7 +30,7 @@ import { SafeHTMLPipe } from 'app/core/Utils/Pipes/SafeHTML.pipe';
         FormsModule,
         ReactiveFormsModule,
         FlexLayoutModule,
-        PermittedDirective,
+
         TranslocoCoreModule,
         SafeHTMLPipe
       

@@ -12,7 +12,7 @@
             <div class="flex items-center justify-center">
                 <img
                     class="w-8"
-                    src="assets/images/logo/RitimUS-Logo.png">
+                    src="assets/images/logo/logo-text.svg">
             </div>
             <!-- Components -->
             <div class="flex items-center ml-auto">
@@ -38,71 +38,7 @@
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center w-full mt-6">
-                <div class="w-full whitespace-nowrap overflow-ellipsis overflow-hidden text-center leading-normal font-medium">
-                    {{user?.fullName}}
-                </div>
-                <div class="w-full mt-0.5 whitespace-nowrap overflow-ellipsis overflow-hidden text-center text-md leading-normal font-medium text-secondary">
-                    {{user?.email}}
-                </div>
-                <div class="w-full mt-0.5 whitespace-nowrap overflow-ellipsis overflow-hidden text-center text-md leading-normal font-medium text-secondary">
-                    {{user?.phone}}
-                </div>
-           
-                <div permitted perm='SEC-100'>
-                    <ng-container *ngIf='!selectedPlayer ;else playerInfo'>
-                        <div class="w-full mt-0.5 whitespace-nowrap overflow-ellipsis overflow-hidden text-center text-md leading-normal font-medium text-secondary">
-                            
-
-                            Öğrenci Seçiniz
-                              
-                          </div>
-                    </ng-container>
-
-                    <ng-template #playerInfo>
-                        <div class="flex  flex-col">
-                            <div class="w-full mt-0.5 whitespace-nowrap overflow-ellipsis overflow-hidden text-center text-md leading-normal font-medium text-secondary">
-                                Öğrenci :   {{selectedPlayer.studentInfo.fullname }}
-                                  
-                              </div>
-                    
-                            <div class="w-full mt-0.5 whitespace-nowrap overflow-ellipsis overflow-hidden text-center text-md leading-normal font-medium text-secondary">
-                              Öğrenci No :   {{selectedPlayer.studentInfo.studentID}}
-                                
-                            </div>
-                            <!-- <div class="w-full mr-1 mt-0.5 whitespace-nowrap overflow-ellipsis overflow-hidden text-center text-md leading-normal font-medium text-secondary">
-                                Sınıfı :    {{selectedPlayer.metaData.class}}
-                            </div> -->
-    
-                        </div>
-                    </ng-template>
-     
-                </div>
-
-                <div permitted perm='SEC-200'>
-                    <ng-container *ngIf='!selectedSchool ;else schoolInfo'>
-                        <div class="w-full mt-0.5 whitespace-nowrap overflow-ellipsis overflow-hidden text-center text-md leading-normal font-medium text-secondary">
-                            
-
-                            Okul Seçiniz
-                              
-                          </div>
-                    </ng-container>
-
-                    <ng-template #schoolInfo>
-                        <div class="flex  flex-col">
-                            <div class="w-full mt-0.5 whitespace-nowrap overflow-ellipsis overflow-hidden text-center text-md leading-normal font-medium text-secondary">
-                                Okul :   {{selectedSchool.displayName }}
-                                  
-                              </div>
-             
-                            <!-- <div class="w-full mr-1 mt-0.5 whitespace-nowrap overflow-ellipsis overflow-hidden text-center text-md leading-normal font-medium text-secondary">
-                                Sınıfı :    {{selectedPlayer.metaData.class}}
-                            </div> -->
-    
-                        </div>
-                    </ng-template>
-     
-                </div>
+            
        
             </div>
         </div>
@@ -132,13 +68,7 @@
         <!-- Components -->
         <div class="flex items-center pl-2 ml-auto space-x-0.5 sm:space-x-2">
             <!-- <search [appearance]="'bar'"></search> -->
-            <ng-container>
-                <playerSelecter  permitted perm='SEC-100'></playerSelecter>
-            </ng-container>
-            <ng-container >
-                <schoolSelector permitted perm='SEC-200'></schoolSelector>
-            </ng-container>
-            <languages></languages>
+  >
             <fuse-fullscreen class="hidden md:block"></fuse-fullscreen> 
             <!-- <shortcuts></shortcuts> -->
             <!-- <messages></messages> -->

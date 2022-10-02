@@ -9,12 +9,12 @@ import { RouterModule } from '@angular/router';
 import { FuseAlertModule } from '@fuse/components/alert';
 import { UserComponent } from 'app/layout/common/user/user.component';
 import { SharedModule } from 'app/shared/shared.module';
-import { SettingsComponent } from './settings/settings.component';
+
 
 @NgModule({
     declarations: [
         UserComponent,
-        SettingsComponent
+ 
     ],
     imports     : [
         MatButtonModule,
