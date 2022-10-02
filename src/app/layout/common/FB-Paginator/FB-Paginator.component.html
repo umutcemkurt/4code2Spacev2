@@ -1,0 +1,9 @@
+<div class="w-full flex justify-start bg-white border border-b-0 border-t-0">
+  <mat-paginator 
+  [length]="length" 
+  [pageSize]="pageSize"
+  hidePageSize='true'
+  [pageSizeOptions]="pageSizeOptions"
+  (page)="onPageChange($event)"
+  ></mat-paginator>
+</div>

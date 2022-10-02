@@ -1,0 +1,180 @@
+{
+    "welcome-back": "Welcome back",
+    "Project": "Project",
+    "Analytics": {
+        "test": "annen",
+        "baba": "father"
+    },
+    "navigation": {
+        "homeworks": "Homeworks",
+        "classes": "Classes",
+        "homeworkManagement": "Homework Management",
+        "notifications": "Notifications",
+        "incomeNotification": "Income Notifications",
+        "sentNotification": "Sent Notifications",
+        "calendar": "Calendar",
+        "support": "Support",
+        "managementPanel": "Management Panel",
+        "schools": "Schools",
+        "team": "Team",
+        "schoolAnalysis": "School Analysis",
+        "chainAnalysis": "Chain Analysis"
+    },
+    "classes": {
+        "title": "Classes",
+        "addButton": "Add",
+        "dataGrid": {
+            "name": "Class",
+            "teacher": "Teacher",
+            "nofStudent": "Number of Student",
+            "nofHomework": "Number of Homework",
+            "avgAnalysis": "Average Analysis",
+            "noData": "There is no data !"
+        },
+        "studentList": {
+            "title": "Students",
+            "newAssignmentButton": "New Assignment",
+            "dataGrid": {
+                "avatar": "Picture",
+                "name": "Full Name",
+                "birthday": "Birthday",
+                "note": "Note"
+            }
+        },
+        "studentDetail": {
+            "newAssignmentButton": "New Assignment",
+            "name": "Full Name",
+            "class": "Class",
+            "tag": "Tag",
+            "addEmailButton": "Add Email",
+            "addPhoneButton": "Add Phhone",
+            "address": "Address",
+            "birthday": "Birthday",
+            "note": "Note"
+        }
+    },
+    "homeworkManagement": {
+        "title": "Homework Management",
+        "newAssignmentButton": "New Assignment",
+        "activeHomework": {
+            "title": "Active Homeworks",
+            "dataGrid": {
+                "advisorName": "Teacher Name",
+                "deadline": "Deadline",
+                "homeworkType": "Homework Type",
+                "homeworkContent": "Homework Content"
+            }
+        },
+        "completedHomework": {
+            "title": "Completed Homeworks",
+            "dataGrid": {
+                "advisorName": "Teacher Name",
+                "deadline": "Deadline",
+                "homeworkType": "Homework Type",
+                "homeworkContent": "Homework Content"
+            }
+        }
+    },
+    "notifications": {
+        "title": "Notifications",
+        "seeAllButton": "See All",
+        "noNotification": "No notifications",
+        "noNotificationDesc": "When you have notifications, they will appear here.",
+        "inCome": {
+            "title": "Notifications",
+            "hasNotifications": "There are {{value}}  unread notifications",
+            "noNotification": "All notifications have been seen"
+        },
+        "sent": {
+            "title": "Sent Notifications",
+            "sentNotificationButton": "Send Notification",
+            "dataGrid": {
+                "title": "Title",
+                "description": "Description",
+                "time": "Sending Date",
+                "read": "Seen",
+                "receiver" :"Receiver"
+            }
+        }
+    },
+    "calendar": {
+        "title": "Calendar",
+        "myCalendars": "My calendars",
+        "dayGridMonth": "Month",
+        "timeGridWeek": "Week",
+        "timeGridDay": "Day",
+        "listYear": "Schedule"
+    },
+    "support": {
+        "title": "Support",
+        "teacherContact": "Teacher Contact Information",
+        "teacherName": "Name Surname",
+        "teacherPhone": "Phone",
+        "classes": "Responsible Classes",
+        "schoolContact": "School - Teacher Contact Information",
+        "schoolName": "School Name",
+        "schoolPhone": "Phone",
+        "schoolAddress": "Address",
+        "tickets": "My Support Tickets",
+        "newTicket": "New Ticket",
+        "noTicket": "There are no tickets",
+        "createTicket": "Create Ticket Request",
+        "infoTitle": " Your request will be processed by the RitimUS team and you will be responded.",
+        "fullname" : "Full Name",
+        "email":"E-Mail",
+        "subject" : "Subject",
+        "message" :"Message"
+    },
+    "homeworks": {
+        "title": "Homeworks",
+        "homework": "Homework",
+        "pending": "Pending",
+        "complated": "Complated",
+        "uncomplated": "Uncomplated",
+        "dataGrid": {
+            "teacher": "Teacher",
+            "deadline": "Deadline "
+        }
+    },
+    "schools":{
+        "title": "All Schools",
+        "add": "Add School" ,
+        "dataGrid":{
+            "schoolName" : "School Name",
+            "manager" : "Manager",
+            "size": "School Size",
+            "avgAnalysis" :"Average School Problem Solving Analysis",
+            "noData" :"There is no data !"
+        }
+    },
+    "team":{
+        "title": "Team",
+        "activeSchool": "Active School",
+        "addUser" : "Add User",
+        "selectSchoolTxt" : "Please select school",
+        "dataGrid" :{
+            "fullname" :"Full Name",
+            "perms" : "Perms",
+            "noData":"There is no data !"
+        },
+        "popup":{
+            "title": "Add New User",
+            "fullname":"Full Name",
+            "perms": "Perms"
+        }
+    },
+    "user": {
+        "signIn" : "Sign in with",
+        "logout" : "Log Out"
+    },
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "email": "E-Mail",
+    "phone": "Phone",
+    "required": "Required",
+    "emailError": "Invalid email format",
+    "clear": "Clear",
+    "actions" : "Actions"
+}

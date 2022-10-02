@@ -1,0 +1,237 @@
+<div class="flex flex-col max-w-320 md:min-w-320 max-h-200 -m-6">
+
+  <!-- Header -->
+  <div class="flex flex-0 items-center justify-between h-16 pr-3 sm:pr-5 pl-6 sm:pl-8 bg-primary text-on-primary">
+    <div class="text-lg font-medium">Analizler</div>
+    <button mat-icon-button (click)="close()" [tabIndex]="-1">
+      <mat-icon class="text-current" [svgIcon]="'heroicons_outline:x'"></mat-icon>
+    </button>
+  </div>
+
+
+  
+  <fuse-alert [type]="'info'"  [appearance]="'outline'" class="mb-3">
+    Her gün saat 08:00 da güncellenir
+  </fuse-alert>
+
+  <div  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full min-w-0">
+    <div *ngIf="analyticData&& analyticData?.intelDiffBalance[0].data.length > 0"
+      class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start justify-between">
+        <div class="text-lg font-medium tracking-tight leading-6 truncate">Zeka Türleri Başarı Denge Grafiği</div>
+
+      </div>
+
+      <div>
+
+        <graph-builder [type]="1" [param]="{type:1 , yMax:10}" [data]="analyticData?.intelDiffBalance"></graph-builder>
+      </div>
+
+    </div>
+
+    <div *ngIf="analyticData &&  analyticData?.problemDiffBalance[0].data.length > 0"
+      class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start justify-between">
+        <div class="text-lg font-medium tracking-tight leading-6 truncate">Çözümleme Başarı Denge Grafiği</div>
+
+      </div>
+
+      <div>
+
+        <!-- <graph-builder [type]="1" [param]="1" [data]="intelligentData"></graph-builder> -->
+        <graph-builder [type]="1" [param]="{type:2 , yMax:10}" [data]="analyticData?.problemDiffBalance"></graph-builder>
+      </div>
+
+    </div>
+
+
+    <div *ngIf="analyticData &&   analyticData?.intelScoreBalance[0].data.length > 0"
+    class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+    <div class="flex flex-col sm:flex-row items-start justify-between">
+      <div class="text-lg font-medium tracking-tight leading-6 truncate">Zeka Türleri Puan Denge Grafiği</div>
+
+    </div>
+
+    <div>
+
+      <graph-builder [type]="1" [param]="{type:1 , yMax:0}" [data]="analyticData.intelScoreBalance"></graph-builder>
+    </div>
+
+  </div>
+
+  <div *ngIf=" analyticData && analyticData?.problemScoreBalance[0]?.data.length > 0"
+    class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+    <div class="flex flex-col sm:flex-row items-start justify-between">
+      <div class="text-lg font-medium tracking-tight leading-6 truncate">Çözümleme Puan Denge Grafiği</div>
+
+    </div>
+
+    <div>
+
+  
+      <graph-builder [type]="1" [param]="{type:2 , yMax:0}" [data]="analyticData.problemScoreBalance"></graph-builder>
+    </div>
+
+  </div>
+
+
+ 
+    <!-- <div
+      class="sm:col-span-2 md:col-span-2 flex flex-col col-span-2 flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start justify-between">
+        <div class="text-lg font-medium tracking-tight leading-6 truncate">Zeka Türü Başarı Gelişimim</div>
+
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-1 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
+   
+        <div>
+          <graph-builder [type]="3" [param]="{type:1 ,percent:false}" [data]="intelligentData"></graph-builder>
+
+        </div>
+
+
+      </div>
+    </div>
+    <div
+      class="sm:col-span-2 md:col-span-2 flex flex-col col-span-2 flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start justify-between">
+        <div class="text-lg font-medium tracking-tight leading-6 truncate">Çözümleme Başarı Gelişimim</div>
+
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-1 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
+     
+        <div>
+          <graph-builder [type]="3" [param]="{type:2 ,percent:false}" [data]="intelligentData"></graph-builder>
+
+        </div>
+
+
+      </div>
+    </div> -->
+
+    <div *ngIf="compareAnalyticData?.intelDiff && compareAnalyticData?.intelDiff[0].data.length > 0"
+      class="sm:col-span-2 md:col-span-2 flex flex-col col-span-2 flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start justify-between">
+        <div class="text-lg font-medium tracking-tight leading-6 truncate">Zeka Türü Başarı Karşılaştırma</div>
+
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-1 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
+       
+        <div>
+          <graph-builder [type]="3" [param]="{type:1 ,percent:false}" [data]="compareAnalyticData.intelDiff"></graph-builder>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div *ngIf="compareAnalyticData?.solvingDiff && compareAnalyticData?.solvingDiff[0].data.length > 0"
+      class="sm:col-span-2 md:col-span-2 flex flex-col col-span-2 flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start justify-between">
+        <div class="text-lg font-medium tracking-tight leading-6 truncate">Çözümleme Başarı Karşılaştırma</div>
+
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-1 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
+
+        <div>
+          <graph-builder [type]="3" [param]="{type:2 ,percent:false}" [data]="compareAnalyticData.solvingDiff"></graph-builder>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- <div *ngIf="analyticData.scoreCompare[0].data.length > 0"
+    class="sm:col-span-2 md:col-span-2 flex flex-col col-span-2 flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+    <div class="flex flex-col sm:flex-row items-start justify-between">
+      <div class="text-lg font-medium tracking-tight leading-6 truncate">Puan Gelişimim </div>
+
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-1 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
+ 
+      <div>
+        <graph-builder [type]="2" [data]="scoreData"></graph-builder>
+
+      </div>
+
+
+    </div>
+  </div> -->
+
+  <!-- <div *ngIf="analyticData.diffCompare[0].data.length > 0"
+    class="sm:col-span-2 md:col-span-2 flex flex-col col-span-2 flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+    <div class="flex flex-col sm:flex-row items-start justify-between">
+      <div class="text-lg font-medium tracking-tight leading-6 truncate">Başarı Gelişimim </div>
+
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-1 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
+ 
+      <div>
+        <graph-builder [type]="2" [data]="promblemSolvingSkillsData"></graph-builder>
+
+      </div>
+
+
+    </div>
+  </div> -->
+
+    <!-- <div
+      class="sm:col-span-2 md:col-span-2 flex flex-col col-span-2 flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start justify-between">
+        <div class="text-lg font-medium tracking-tight leading-6 truncate">Ödev Karşılaştırma</div>
+
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-1 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
+      
+        <div>
+          <graph-builder [type]="3" [param]="{type:3 ,percent:false}" [data]="homeworkData"></graph-builder>
+
+        </div>
+
+
+      </div>
+
+    </div> -->
+
+    <!-- <div
+      class="sm:col-span-2 md:col-span-2 flex flex-col col-span-2 flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start justify-between">
+        <div class="text-lg font-medium tracking-tight leading-6 truncate">Devamsızlık</div>
+
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-1 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
+   
+        <div>
+          <graph-builder [type]="4" [data]="intelligentData"></graph-builder>
+
+        </div>
+
+
+      </div>
+    </div> -->
+
+
+
+  </div>
+
+
+ 
+
+
+
+  <div class="flex  items-center  py-4 px-4 border-t bg-gray-50 dark:bg-transparent">
+
+    <!-- Cancel -->
+    <button class="ml-auto" mat-button [matTooltip]="'İptal'" (click)="close()">
+      İptal
+    </button>
+    <!-- Save -->
+    <!-- <button class="ml-2" mat-flat-button [color]="'primary'" (click)='save()' [disabled]="homeworkForm.invalid"
+      [matTooltip]="'Kaydet'">
+      Kaydet
+    </button> -->
+  </div>
+</div>

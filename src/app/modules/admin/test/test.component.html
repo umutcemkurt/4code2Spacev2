@@ -1,0 +1,110 @@
+<div class="flex w-full">
+    <div class="w-2/12">
+        <button mat-raised-button color="primary" (click)='updatePerms()'>updatePerms</button>
+        <br>
+        <button (click)='sendEmail()'>send email</button>
+        <br>
+        <button (click)='addSchool()'>add school</button>
+        <br>
+        <button (click)='addClassroom()'>addClassroom</button>
+        <br>
+        <button (click)='loader()'>loader</button>
+        <br>
+        <button (click)='loadConversation()'>loadConversation</button>
+        <br>
+        <button (click)='generateCode()'>generateCode</button>
+        <br>
+        <button (click)='calendar()'>calendar</button>
+        <br>
+        <button (click)='getCalendar()'>getCalendar</button>
+        <br>
+        <button (click)='testSchedular()'>testSchedular</button>
+        <br>
+        <button (click)='giveCorporate()'>giveCorporate</button>
+        <br>
+        <button (click)='qqtest()'>qqtest</button>
+        <br>
+        <button (click)='deletePlayer()'>deletePlayer</button>
+        <br>
+        <button (click)='fnTest()'>fnTest</button>
+
+        <br>
+        <button (click)='realTimeAdd()'>realTimeAdd</button>
+        <br>
+        <button (click)='fnTest()'>REaltimeGEt</button>
+        
+<div>
+    <button class="mr-2" (click)="showPlayerDatagrid.hidden = !showPlayerDatagrid.hidden;showGraphs.hidden = !showGraphs.hidden; showCalendar.hidden = !showCalendar.hidden  ">showPlayerDatagrid</button>
+    
+    <button class="mr-2" (click)="showGraphs.hidden = false ;showPlayerDatagrid.hidden = true; showCalendar.hidden = !showCalendar.hidden  ">showGraphs</button>
+    <button (click)="showGraphs.hidden = true ;showPlayerDatagrid.hidden = true; showCalendar.hidden = false ">showCalendar</button>
+
+</div>
+
+    
+    </div>
+
+    <div #showPlayerDatagrid hidden>
+        <ng-container  >
+            <dx-data-grid id="gridContainer" [dataSource]="dataSource" [showBorders]="true" [columnAutoWidth]='true'>
+    
+                <dxo-filter-row [visible]="false"></dxo-filter-row>
+                <dxo-header-filter [visible]="true"></dxo-header-filter>
+                <dxo-search-panel [visible]="false" [width]="240"></dxo-search-panel>
+               
+              
+                <dxo-selection mode="single"></dxo-selection>
+                <!-- <dxo-master-detail [enabled]="true" template="students"></dxo-master-detail> -->
+    
+    
+    
+              </dx-data-grid>
+    
+              <app-FB-Paginator [dataSource]='dataSource' (data)='dataSource = $event'></app-FB-Paginator>
+        </ng-container>
+
+    </div>
+
+    <div #showGraphs  hidden class="w-full">
+        <div>
+            <graph-builder [type]="1" [param]="1" [data]="data"></graph-builder>
+
+        </div>
+        <div>
+            <graph-builder [type]="2"  [data]="data"></graph-builder>
+
+        </div>
+
+        <div>
+            <graph-builder [type]="3"  [data]="data"></graph-builder>
+
+        </div>
+
+        
+        <div>
+            <graph-builder [type]="4"  [data]="data"></graph-builder>
+
+        </div>
+    </div>
+    <div #showCalendar>
+        <dx-scheduler
+        [dataSource]="appointmentsData"
+        [views]="['week', 'month' , 'agenda']"
+        currentView="month"
+        [currentDate]="currentDate"
+
+      >
+      <dxi-resource
+      fieldExpr="calendarID"
+      [displayExpr]="'title'"
+      label="Takvim"
+      [allowMultiple]="true"
+      [useColorAsDefault]="true"
+      [dataSource]="calendars"
+      
+    >
+    </dxi-resource>
+      </dx-scheduler>
+      
+    </div>
+</div>

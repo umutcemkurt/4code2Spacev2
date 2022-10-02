@@ -1,0 +1,181 @@
+{
+    "welcome-back": "Hoşgeldin",
+    "Project": "Proje",
+    "Analytics": {
+        "test": "annen",
+        "baba": "father"
+    },
+    "navigation": {
+        "homeworks": "Ödevlerim",
+        "classes": "Sınıflar",
+        "homeworkManagement": "Ödev Yönetimi",
+        "notifications": "Bildirimler",
+        "incomeNotification": "Gelen Bildirimler",
+        "sentNotification": "Gönderilen Bildirimler",
+        "calendar": "Takvim",
+        "support": "Destek",
+        "managementPanel": "Yönetim Paneli",
+        "schools": "Tüm Okullar",
+        "team": "Ekip",
+        "schoolAnalysis": "Okul Analizi",
+        "chainAnalysis": "Zincir Analizi"
+    },
+    "classes": {
+        "title": "Sınıflar",
+        "addButton": "Ekle",
+        "dataGrid": {
+            "name": "Sınıf",
+            "teacher": "Öğretmen",
+            "nofStudent": "Öğrenci Sayısı",
+            "nofHomework": "Ödev sayısı",
+            "avgAnalysis": "Ortalama Analiz",
+            "noData": "Hiç data yok !"
+        },
+        "studentList": {
+            "title": "Öğrenciler",
+            "newAssignmentButton": "Sınıfa Ödev Ver",
+            "dataGrid": {
+                "avatar": "Resmi",
+                "name": "Adı Soyadı",
+                "birthday": "Doğum Günü",
+                "note": "Not"
+            }
+        },
+        "studentDetail": {
+            "newAssignmentButton": "Öğrenciye Ödev Ver",
+            "name": "Adı Soyadı",
+            "class": "Sınıfı",
+            "tag": "Etiket",
+            "addEmailButton": "E-Posta Ekle",
+            "addPhoneButton": "Telefon Ekle",
+            "address": "Adres",
+            "birthday": "Doğum Günü",
+            "note": "Not"
+        }
+     
+    },
+    "homeworkManagement": {
+        "title": "Ödev Yönetimi",
+        "newAssignmentButton": "Yeni Ödev Ver",
+        "activeHomework": {
+            "title": "Aktif Ödevler",
+            "dataGrid": {
+                "advisorName": "Öğretmen Adı",
+                "deadline": "Son Teslim Tarihi",
+                "homeworkType": "Ödev Türü",
+                "homeworkContent": "İçeriği"
+            }
+        },
+        "completedHomework": {
+            "title": "Tamamlanan Ödevler",
+            "dataGrid": {
+                "advisorName": "Öğretmen Adı",
+                "deadline": "Son Teslim Tarihi",
+                "homeworkType": "Ödev Türü",
+                "homeworkContent": "İçeriği"
+            }
+        }
+    },
+    "notifications":{
+        "title": "Bildirimler",
+        "seeAllButton": "Tümünü Gör",
+        "noNotification": "Herhangi bildirim yok",
+        "noNotificationDesc": "Bildirim aldığınız zaman burada gözükecektir.",
+        "inCome": {
+            "title" : "Bildirimler",
+            "hasNotifications": "{{value}} adet okunmayan bildirim var",
+            "noNotification" : "Bütün bildirimler okunmuş!"
+        },
+        "sent": {
+            "title" : "Gönderilen Bildirimler",
+            "sentNotificationButton": "Bildirim Gönder",
+            "dataGrid":{
+                "title": "Başlık",
+                "description" : "Açıklama",
+                "time" :"Gönderim Tarihi",
+                "read": "Okundu mu",
+                "receiver" :"Gönderilen"
+            }
+        }
+    },
+    "calendar": {
+        "title": "Takvim",
+        "myCalendars": "Takvimim",
+        "dayGridMonth": "Aylık",
+        "timeGridWeek": "Haftalık",
+        "timeGridDay": "Günlük",
+        "listYear": "Takvim"
+    },
+    "support": {
+        "title": "Destek",
+        "teacherContact": "Öğretmen İletişim Bilgileri",
+        "teacherName": "Adı Soyadı",
+        "teacherPhone": "Cep Telefonu",
+        "classes": "Sorumlu Olduğu Sınıflar",
+        "schoolContact": "Okul - Öğretmen  İletişim Bilgileri",
+        "schoolName": "Okul Adı",
+        "schoolPhone": "Telefonu",
+        "schoolAddress": "Adresi",
+        "tickets": "Destek Taleplerim",
+        "newTicket": "Yeni Mesaj Oluştur",
+        "noTicket": "Henüz bir talep oluşturmadınız",
+        "createTicket": "Talebinizi Oluşturun",
+        "infoTitle": "Talebiniz RitimUS ekibi tarafından işleme alınacak ve size geri dönüş sağlanacaktır.",
+        "fullname" : "Ad Soyad",
+        "subject" : "Konu",
+        "message" :"Mesajınız"
+    },
+    "homeworks": {
+        "title": "Ödevlerim",
+        "homework": "Ödev",
+        "pending": "Bekleyen",
+        "complated": "Tamamlanan",
+        "uncomplated": "Tamamlanmayan",
+        "dataGrid": {
+            "teacher": "Öğretmen",
+            "deadline": "Son Teslim Tarihi "
+        }
+    },
+    "schools":{
+        "title": "Tüm Okullar",
+        "add": "Ekle" ,
+        "dataGrid":{
+            "schoolName" : "Okul Adı",
+            "manager" : "Müdür",
+            "size": "Okul Mevcudu",
+            "avgAnalysis" :"Ortalama Okul Problem Çözme Analizi",
+            "noData" :"Hiç data yok !"
+        }
+    },
+    "team":{
+        "title": "Ekip",
+        "activeSchool": "Aktif Okul",
+        "addUser" : "Kişi Ekle",
+        "selectSchoolTxt" : "Aktif Okul Seç",
+        "dataGrid" :{
+            "fullname" :"Ad Soyad",
+            "perms" : "İzinler",
+            "noData":"Hiç data yok !"
+        },
+        "popup":{
+            "title": "Yeni Kullanıcı Ekle",
+            "fullname":"Ad Soyad",
+            "perms": "İzinler"
+        }
+        
+    },
+    "user": {
+        "signIn" : "Giriş yapılan",
+        "logout" : "Çıkış yap"
+    },
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "email": "E-Posta",
+    "phone": "Telefon",
+    "required": "Gereklidir",
+    "emailError": "Geçerli bir email hasabı giriniz",
+    "clear": "Temizle",
+    "actions" : "İşlemler"
+}
